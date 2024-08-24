@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Personas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Listado de Personas</h1>
+    <button id="newPersonBtn">Nueva Persona</button>
+    <table id="personTable">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Cédula</th>
+                <th>RUT</th>
+            </tr>
+        </thead>
+        <tbody id="personList"></tbody>
+    </table>
+
+    <div id="formContainer" style="display:none;">
+        <h2>Agregar Nueva Persona</h2>
+        <form id="personForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <div id="nombreError" class="error"></div>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            <div id="apellidoError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <div id="emailError" class="error"></div>
+
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" required>
+            <div id="cedulaError" class="error"></div>
+
+            <label for="rut">RUT:</label>
+            <input type="text" id="rut" required>
+            <div id="rutError" class="error"></div>
+
+            <button type="submit">Guardar</button>
+            <button type="button" id="cancelBtn">Cancelar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
