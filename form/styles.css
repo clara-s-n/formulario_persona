@@ -62,7 +62,16 @@ input.invalid {
     margin-top: 5px;
 }
 
+.button-conteiner {
+    display: flex;
+    gap: 10px; 
+    justify-content: center;
+}
+
 button {
+    flex: 1; 
+    max-width: 300px; 
+    margin: 0;
     display: block;
     width: 100%;
     padding: 10px;

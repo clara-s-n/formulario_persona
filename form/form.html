@@ -39,12 +39,21 @@
         <input type="text" id="rut" name="rut" required placeholder="XXXXXXXXXXXX">
         <div id="rutError" class="error"></div>
 
-        <button type="button" id="registrarBtn">Registrar</button>
+        <div class="button-conteiner">
+            <button type="button" id="registrarBtn">Registrar</button>
+            <button type="button" id="listadoBtn">Listado de Personas</button>
+        </div>
+
     </form>
     
     <script src="main.js"></script>
     <script src="idAlgorithm.js"></script>
     <script src="rutAlgorithm.js"></script>
+    <script>
+        document.getElementById('listadoBtn').addEventListener('click', function() {
+            window.location.href = '../peopleList/index.html';
+        });
+    </script>
 </body>
 
 </html>
