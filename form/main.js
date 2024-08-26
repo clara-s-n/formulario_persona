@@ -100,7 +100,7 @@ registrarBtn.addEventListener('click', async function (e) {
 
             if (response.ok) {
                 alert('Registro exitoso');
-                window.location.href = 'index.html'; // Redirige al listado después del registro
+                window.location.href = '../peopleList/index.html'; // Redirige al listado después del registro
             } else {
                 alert('Error al registrar la persona');
             }
