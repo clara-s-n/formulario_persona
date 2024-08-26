@@ -63,14 +63,16 @@ input.invalid {
 }
 
 .button-conteiner {
-    display: flex;
-    gap: 10px; 
-    justify-content: center;
+    /* Hacemos que el boton de registrar tome mas espacio y sea una grid con los 3 botones*/
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 button {
-    flex: 1; 
-    max-width: 300px; 
+    flex: 1;
+    max-width: 300px;
     margin: 0;
     display: block;
     width: 100%;
@@ -82,9 +84,19 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-family: 'Baskervville SC';
+    transition: background-color 0.3s;
+    justify-content: center;
 }
 
 button:hover {
     background-color: #A38260;
 
+}
+
+#registrarBtn:hover {
+    background-color: #89c87e;
+}
+
+#cancelarBtn:hover {
+    background-color: #a30707;
 }
