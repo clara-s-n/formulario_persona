@@ -28,20 +28,24 @@ listadoBtn.addEventListener('click', function (e) {
 
 const validations = {
     nombre: (value) => {
+        if (!value.trim()) return 'El campo nombre es obligatorio';
         if (value.length < 2) return 'El nombre debe tener al menos 2 caracteres';
         if (value.length > 50) return 'El nombre no puede tener más de 50 caracteres';
         return '';
     },
     apellido: (value) => {
+        if (!value.trim()) return 'El campo apellido es obligatorio';
         if (value.length < 2) return 'El apellido debe tener al menos 2 caracteres';
         if (value.length > 50) return 'El apellido no puede tener más de 50 caracteres';
         return '';
     },
     email: (value) => {
+        if (!value.trim()) return 'El campo correo electrónico es obligatorio';
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return emailRegex.test(value) ? '' : 'El correo electrónico no es válido';
     },
     password: (value) => {
+        if (!value.trim()) return 'El campo contraseña es obligatorio';
         if (value.length < 8) return 'La contraseña debe tener al menos 8 caracteres';
         if (value.length > 20) return 'La contraseña no puede tener más de 20 caracteres';
         if (!/[A-Z]/.test(value)) return 'La contraseña debe contener al menos una mayúscula';
@@ -51,14 +55,17 @@ const validations = {
         return '';
     },
     repeatPassword: (value, password) => {
+        if (!value.trim()) return 'Debe repetir la contraseña';
         return value === password ? '' : 'Las contraseñas no coinciden';
     },
     cedula: (value) => {
-        if (!isValidFormatId(value)) return 'El formato de la cédula no es válido';
+        if (!value.trim()) return 'El campo cédula es obligatorio';
+        if (!isValidFormatId(value)) return 'El formato de la cédula no es válido. Debe ser X.XXX.XXX-X.';
         return isValidId(value) ? '' : 'La cédula no es válida';
 
     },
     rut: (value) => {
+        if (!value.trim()) return 'El campo RUT es obligatorio';
         if (!isValidFormat(value)) return 'El formato del RUT no es válido';
         return isValidRut(value) ? '' : 'El RUT no es válido';
     }
