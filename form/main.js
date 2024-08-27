@@ -11,6 +11,20 @@ class Persona {
 const form = document.getElementById('registroForm');
 const inputs = form.querySelectorAll('input');
 const registrarBtn = document.getElementById('registrarBtn');
+const cancelarBtn = document.getElementById('cancelarBtn');
+const listadoBtn = document.getElementById('listadoBtn');
+
+// Funcion para utilizar los botones cancelar y listado
+cancelarBtn.addEventListener('click', function (e) {
+    // Evita que el formulario se envíe y recarga la página
+    e.preventDefault();
+    window.location.reload();
+});
+
+listadoBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.href = '../peopleList/index.html';
+});
 
 const validations = {
     nombre: (value) => {
@@ -69,7 +83,7 @@ function validateField(field) {
 
 const API_URL = 'http://localhost:3000';
 
-// Modifica la función de registro para enviar los datos al backend
+// Modificamos la función de registro para enviar los datos al backend
 registrarBtn.addEventListener('click', async function (e) {
     e.preventDefault();
     let isValid = true;
@@ -100,7 +114,7 @@ registrarBtn.addEventListener('click', async function (e) {
 
             if (response.ok) {
                 alert('Registro exitoso');
-                window.location.href = 'index.html'; // Redirige al listado después del registro
+                window.location.href = '../peopleList/index.html'; // Redirige al listado después del registro
             } else {
                 alert('Error al registrar la persona');
             }
