@@ -87,7 +87,6 @@ function validateField(field) {
 }
 
 // Lógica para el registro de personas
-
 const API_URL = 'http://localhost:3000';
 
 // Modificamos la función de registro para enviar los datos al backend

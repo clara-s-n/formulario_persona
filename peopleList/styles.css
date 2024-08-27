@@ -18,44 +18,6 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form {
-    background-color: #FAF2D2;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-    background-color: #f3dfb7;
-}
-
-input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-input.valid {
-    border-color: #28a745;
-}
-
-input.invalid {
-    border-color: #dc3545;
-}
-
-.error {
-    color: #dc3545;
-    font-size: 0.9em;
-    margin-top: 5px;
-}
-
 .card {
     width: 300px;
     height: 400px;
@@ -92,24 +54,27 @@ input.invalid {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-button {
-    flex: 1;
-    max-width: 60%;
-    margin: 0 auto;
-    display: block;
+.add-person-card button {
     width: 100%;
-    padding: 5px;
+    height: 75%;
+    border: none;
     background-color: #B59E79;
     color: white;
-    border: none;
-    border-radius: 4px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    font-family: 'Baskervville SC';
+    transition: background-color 0.3s;
+    border-radius: 15px;
     margin-bottom: 20px;
-    font-size: large;
+    padding: 5px;
 }
 
-button:hover {
+.add-person-card button:hover {
     background-color: #A38260;
+}
+
+#addPerson i {
+    font-size: 3em;
 }
